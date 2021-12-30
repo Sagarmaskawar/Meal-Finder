@@ -44,6 +44,8 @@ function searchmeal(e){
 
 
 function getMealById(mealID){
+    mealel.innerHTML="";
+    result.innerHTML="";
     fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`)
     .then(res =>res.json())
     .then(data=>{
